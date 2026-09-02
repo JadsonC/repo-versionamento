@@ -1,3 +1,3 @@
 console.log("Olá, mundo!")
 
-console.log("Sejam bem vindos!")
+console.log("Seja bem vindo!")
