@@ -3,5 +3,5 @@ export function calcularDesconto(valor, percentual) {
         throw new Error('Percentual inválido');
     }
 
-    return valor * (percentual / 100);
+    return valor * (percentual);
 }
