@@ -1,0 +1,33 @@
+# testes, eslint, prettier
+# workflow (fluxo de trabalho)
+
+name: CI # nomeando o workflow
+
+on: #quando o workflow será executado
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs: #tarefa que será executada do workflow
+  testes: #nomeando a tarefa que será executada
+    runs-on: ubuntu-latest #aonde o workflow será executado
+    steps:
+      - uses: actions/checkout@v4 #baixa o conteúdo do repositório para a máquina virtual
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar dependências
+        run: npm
+
+      - name: Verificar lint (ESLint)
+        run: npm run lint
+
+      - name: Verificar formatação (Prettier)
+        run: npx prettier --check .
+
+      - name: Rodar testes com cobertura
+        run: npm test -- --coverage
