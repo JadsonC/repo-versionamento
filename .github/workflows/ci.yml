@@ -1,3 +1,4 @@
+# .github/workflows/ci.yml
 name: CI
 
 on:
@@ -17,14 +18,14 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Verificar lint (ESLint)
-        run: npm run lint
-      
-      - name: Verificar formatação (Prettier)
-        run: npx prettier --check .
-
       - name: Instalar dependências
         run: npm ci
+
+      - name: Verificar lint (ESLint)
+        run: npm run lint
+
+      - name: Verificar formatação (Prettier)
+        run: npx prettier --check .
 
       - name: Rodar testes com cobertura
         run: npm test -- --coverage
