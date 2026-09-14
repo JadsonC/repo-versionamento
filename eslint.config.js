@@ -1,8 +1,8 @@
 export default [
-    {
-        rules: {
-            "no-unused-vars": "error",
-            "no-console": "off"
-        }
-    }
+  {
+    rules: {
+      'no-unused-vars': 'error',
+      'no-console': 'off',
+    },
+  },
 ];

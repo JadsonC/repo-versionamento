@@ -1,3 +1,3 @@
-console.log("Olá, mundo!")
+console.log('Olá, mundo!');
 
-console.log("Seja bem vindo!")
+console.log('Seja bem vindo!');

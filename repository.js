@@ -3,7 +3,11 @@ const pedidos = [];
 
 export const repository = {
   async salvar(pedido) {
-    const novoPedido = { id: pedidos.length + 1, itens: pedido.itens, total: pedido.total };
+    const novoPedido = {
+      id: pedidos.length + 1,
+      itens: pedido.itens,
+      total: pedido.total,
+    };
     pedidos.push(novoPedido);
     return novoPedido;
   },
