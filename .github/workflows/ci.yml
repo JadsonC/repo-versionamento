@@ -21,7 +21,7 @@ jobs: #tarefa que será executada do workflow
           node-version: '24'
 
       - name: Instalar dependências
-        run: npm
+        run: npm ci
 
       - name: Verificar lint (ESLint)
         run: npm run lint
