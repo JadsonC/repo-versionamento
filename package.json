@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
@@ -11,7 +13,9 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "eslint": "^10.10.0",
     "jest": "^30.5.1",
+    "prettier": "^3.9.6",
     "supertest": "^7.2.2"
   },
   "dependencies": {
