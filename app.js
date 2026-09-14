@@ -22,4 +22,9 @@ app.post('/clientes', async (req, res) => {
   res.status(201).json(pedido);
 });
 
+app.post('/cadastro', async (req, res) => {
+  const pedido = await criarPedido(repository, req.body);
+  res.status(201).json(pedido);
+});
+
 export default app;
